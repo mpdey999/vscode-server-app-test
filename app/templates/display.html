@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f3ec">
+  <title>Display | Name Studio</title>
+  <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="topbar">
+      <a class="wordmark" href="./" aria-label="Name Studio home"><span class="wordmark-mark">N</span> name studio</a>
+      <span class="top-note">A little introduction</span>
+    </header>
+    <section class="panel display-panel" aria-labelledby="page-title">
+      <div class="eyebrow"><span class="eyebrow-dot"></span> DISPLAY</div>
+      {% if name %}
+      <h1 id="page-title">Nice to meet you,</h1>
+      <p class="display-name">{{ name | e }}</p>
+      {% else %}
+      <h1 id="page-title">Nothing to display yet.</h1>
+      <p class="intro-copy">Enter a name on the Home page to see it here.</p>
+      {% endif %}
+      <div class="display-rule"><span></span></div>
+      <a class="button button-secondary" href="./">{{ "Enter another name" if name else "Go to Home" }} <span aria-hidden="true">&#8594;</span></a>
+      <span class="panel-index">02 <span>/</span> 02</span>
+    </section>
+    <footer class="page-footer"><span>NAME STUDIO</span><span>MADE FOR A GOOD FIRST IMPRESSION</span></footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,2 @@
+# Example:
+poc-hello-package==1.0.0
